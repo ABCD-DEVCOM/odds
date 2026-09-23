@@ -97,7 +97,7 @@ abcd_add_hook('central_menu', function(string $menuHtml) use ($bridge): string {
     $lang = $bridge->get('lang', 'en');
     // The link safely redirects the librarian to the standard cataloguing tool for the odds database
     $menuHtml .= '<a href="/central/settings/plugin_admin.php?plugin=odds" class="menuButton utilsButton">';
-	$menuHtml .= '<span><strong><?php echo $msgstr["configure_ODDS"]. " ABCD"?></strong></span>';
+	$menuHtml .= '<span><strong>' . ($msgstr["configure_ODDS"] ?? 'Configure ODDS') . ' ABCD</strong></span>';
 	$menuHtml .= '</a>';
 
     return $menuHtml;
